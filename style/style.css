@@ -197,7 +197,7 @@ img, a {
 }
 
 .mouseHitAnimation{
-    animation: mouseHit 0.1s;
+    animation: mouseHit 0.5s;
 }
 
 @keyframes mousePop {

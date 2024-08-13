@@ -42,7 +42,7 @@ $(document).ready(function () {
     //Timer Function for 30 seconds
 
     //30 Seconds of game time = 10000 miliseconds
-    let gameTime = 10000;
+    let gameTime = 30000;
     //Set remaining time
     let remainingTime = gameTime;
     //Interval is by default null
