@@ -79,7 +79,7 @@ $(document).ready(function () {
         score.innerHTML = gameScore + " Points";
         clearInterval(interval);
         $(".mouse").removeClass("mouseMenuAnimation mouseAnimation mouseHitAnimation");
-        
+
         //Hide button
         $("#startGameBtn").hide();
         $("#winMsg").hide();
@@ -118,6 +118,7 @@ $(document).ready(function () {
         $("#startGameBtn").show();
         gameScore = 0;
         score.innerHTML = gameScore + " Points";
+        $(".mouse").addClass("mouseMenuAnimation");
     });
 
 });
