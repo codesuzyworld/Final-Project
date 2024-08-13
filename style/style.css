@@ -159,15 +159,29 @@ body{
     width:60%; 
     height: auto; 
     transform: translateY(80%); 
-    transition: transform 0.5s ease; 
+    /* animation: mousePop 0.8s infinite; */
+}
+
+.mouseAnimation{
+    
+    animation: mousePop 0.8s;
+}
+
+@keyframes mousePop {
+    0% {
+        transform: translateY(80%); 
+    }
+    
+    50% {
+        transform: translateY(0);
+      }
+
+    100% {
+        transform: translateY(80%); 
+      }
 }
 
 
-
-
-.whack:hover .mouse-container .mouse {
-    transform: translateY(0);
-}
 
 /* @media (max-width: 480px) {
     .whack img {
