@@ -215,23 +215,17 @@ img, a {
 
 @keyframes mouseHit {
     0% {
-        transform: translateY(0%);
-        rotate: 15deg;
+        transform: translateY(0%) rotate(15deg);
     }
     
     25% {
-        transform: translateY(0%);
-        rotate: -15deg;
-      }
+        transform: translateY(0%) rotate(-15deg);
+    }
 
     50% {
-        transform: translateY(0%);
-        rotate: 15deg;
-      }
-    
-
+        transform: translateY(0%) rotate(15deg);
+    }
 }
-
 
 @media (max-width: 480px) {
     

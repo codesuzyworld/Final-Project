@@ -57,6 +57,7 @@ $(document).ready(function () {
             window.clearInterval(interval);
             timer.innerHTML = "0 Sec";
             gameResult.innerHTML = "Your score is " + gameScore;
+            $(".mouse").removeClass("mouseAnimation");
             $("#winMsg").show();
             return;
         }
