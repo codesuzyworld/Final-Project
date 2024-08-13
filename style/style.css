@@ -185,7 +185,6 @@ img, a {
     width:60%; 
     height: auto; 
     transform: translateY(80%); 
-    /* animation: mousePop 0.8s infinite; */
 }
 
 .mouseAnimation{
@@ -234,16 +233,37 @@ img, a {
 }
 
 
-/* @media (max-width: 480px) {
-    .whack img {
-        width: 100%;
-        min-height: 200px; 
-        object-fit: contain; 
-    }
-    #startGameBtn{
-        border-radius: 50px;
-        font-size: 16px;
-        padding:10px;
+@media (max-width: 480px) {
+    
+    
+    .whack {
+        width: 100px;
+        height: 100px;
+        gap:10px
     }
     
-} */
+    .mouse-container {
+        transform: translate(20%, -109%);
+    }
+
+    .Btn{
+        border-radius: 50px;
+        font-size: 14px;
+        padding:10px;
+        box-shadow: 0px 0px 20px 5px #FFF;
+    }
+
+    .box{
+        border-radius: 33px;
+        width:100px;
+        padding:5px 10px 5px 10px;
+        gap: 10px;
+    }
+    #timer{
+        font-size: 14px;
+    }
+    
+    #score{
+        font-size:14px;
+    }
+} 
