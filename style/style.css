@@ -1,0 +1,184 @@
+
+body{
+    font-family: "Poppins", sans-serif;
+    z-index: 0;
+}
+
+/*Start Game Btn*/
+
+#startGame{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#startGameBtn{
+    border-radius: 80px;
+    border:none;
+    background-color: #4E68A0;
+    box-shadow: 0px 0px 30px 10px #FFF;
+    color:white;
+    font-family: "Poppins";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding:20px;
+    transition:0.5s;
+}
+
+#startGameBtn:hover{
+    box-shadow: 0px 0px 50px 20px #FFF;
+    transition:0.5s;
+    background-color: #577bca;
+    padding:20px 30px 20px 30px;
+}
+
+/*Game UI*/
+#bodySection{
+    background-image: url("../asset/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+#gameUI{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#infoSection{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#infoSection img{
+    height: 30px;
+}
+
+.box{
+    border-radius: 33px;
+    background: #FFF;
+    width:200px;
+    padding:10px 20px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer{
+    color: #5B95CC;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+#score{
+    color: #418160;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+#gameTitle{
+    color: #3D3960;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+/*Whack A Mole Game*/
+
+#whackAMole{
+    display: flex;
+    flex-direction: column;
+    gap:1vw;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Row1{
+    display: flex;
+    flex-direction: row;
+    gap:5%;
+}
+
+#Row2{
+    display: flex;
+    flex-direction: row;
+    gap:5%;
+}
+
+
+
+.whack {
+    width: 200px;
+    height: 200px;
+    gap:20px
+}
+
+.dirt {
+    position:relative;
+    z-index: 2; 
+    width: 100%;
+    height: auto;
+}
+
+
+.mouse-container {
+    position:relative;
+    overflow: hidden;
+    z-index: 0; 
+    transform: translate(20%, -106%);
+}
+
+.mouse {
+    width:60%; 
+    height: auto; 
+    transform: translateY(80%); 
+    transition: transform 0.5s ease; 
+}
+
+
+
+
+.whack:hover .mouse-container .mouse {
+    transform: translateY(0);
+}
+
+/* @media (max-width: 480px) {
+    .whack img {
+        width: 100%;
+        min-height: 200px; 
+        object-fit: contain; 
+    }
+    #startGameBtn{
+        border-radius: 50px;
+        font-size: 16px;
+        padding:10px;
+    }
+    
+} */
