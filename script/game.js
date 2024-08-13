@@ -74,6 +74,7 @@ $(document).ready(function () {
     //Function that will start the game after clickint the start game button. 
     function startGame(){
         $("#startGameBtn").hide();
+        $("#winMsg").hide();
         $(".mouse").removeClass("mouseMenuAnimation");
         gameTimer();
         timer.innerHTML = Math.floor(gameTime / 1000) + "Sec";
