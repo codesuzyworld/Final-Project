@@ -17,7 +17,7 @@
 <body id="bodySection">
     <main> 
         <div id="gameUI">
-                <h1 id="gameTitle">Whack A Mole</h1>
+                <h1 class="gameTitle">Whack A Mole</h1>
             <div id="infoSection">
                 <div id="timerBox" class="box">
                     <img src="./asset/timer.svg" alt="Time Left">
@@ -30,10 +30,13 @@
             </div>
         </div>
 
-        <div id="winMsg"></div>
+        <div id="winMsg">
+            <p id="gameResult" class=gameTitle>Winning Message</p>
+            <button type="button" id="playAgainBtn" class="Btn">PLAY AGAIN</button>
+        </div>
 
         <div id="startGame">
-            <button type="startGameBtn" id="startGameBtn">START GAME NOW</button>
+            <button type="button" id="startGameBtn" class="Btn">START GAME NOW</button>
         </div> 
 
         <div id="whackAMole">

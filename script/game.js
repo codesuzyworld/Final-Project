@@ -9,9 +9,13 @@ $(document).ready(function () {
     // Timer and Score 
     let timer = document.getElementById("timer");
     let score = document.getElementById("score");
+    let gameResult = document.getElementById("gameResult");
 
     // Play menu animation, everyone jumping in and out! 
     $(".mouse").addClass("mouseMenuAnimation");
+
+    //Hide winning dialog message
+    $("#winMsg").hide();
 
     // Function that will choose a random hole 
     function chooseHole(){
@@ -38,7 +42,7 @@ $(document).ready(function () {
     //Timer Function for 30 seconds
 
     //30 Seconds of game time = 10000 miliseconds
-    let gameTime = 30000;
+    let gameTime = 10000;
     //Set remaining time
     let remainingTime = gameTime;
     //Interval is by default null
@@ -52,9 +56,8 @@ $(document).ready(function () {
         if (remainingTime <= 0){
             window.clearInterval(interval);
             timer.innerHTML = "0 Sec";
-            gameScore = 0;
-            score.innerHTML = gameScore + " Points";
-            $("#startGameBtn").show();
+            gameResult.innerHTML = "Your score is " + gameScore;
+            $("#winMsg").show();
             return;
         }
 
@@ -95,11 +98,18 @@ $(document).ready(function () {
                 });
             }
         });
-    }
+    } 
 
     //Event Listener
     $("#startGameBtn").on("click", function() {
         startGame();
+    });
+
+    $("#playAgainBtn").on("click", function() {
+        $("#winMsg").hide();
+        $("#startGameBtn").show();
+        gameScore = 0;
+        score.innerHTML = gameScore + " Points";
     });
 
 });
