@@ -73,6 +73,14 @@ $(document).ready(function () {
 
     //Function that will start the game after clickint the start game button. 
     function startGame(){
+        //Reset interval and score
+        remainingTime = gameTime; 
+        gameScore = 0; 
+        score.innerHTML = gameScore + " Points";
+        clearInterval(interval);
+        $(".mouse").removeClass("mouseMenuAnimation mouseAnimation mouseHitAnimation");
+        
+        //Hide button
         $("#startGameBtn").hide();
         $("#winMsg").hide();
         $(".mouse").removeClass("mouseMenuAnimation");
@@ -88,7 +96,6 @@ $(document).ready(function () {
                 console.log("10 points added");
                 gameScore += 10;
                 score.innerHTML = gameScore + " Points";
-
                 // Set the mouse element for easy access
                 let mouseElement = $(this).find(".mouse");
                 //Play hit animation 
