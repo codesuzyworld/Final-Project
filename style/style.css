@@ -163,8 +163,11 @@ body{
 }
 
 .mouseAnimation{
-    
     animation: mousePop 0.8s;
+}
+
+.mouseMenuAnimation{
+    animation: mousePop 1s infinite;
 }
 
 @keyframes mousePop {
@@ -181,6 +184,27 @@ body{
       }
 }
 
+/* @keyframes mouseDance {
+    0% {
+        transform: translateY(80%); 
+        rotate: 5deg;
+    }
+    
+    25% {
+        transform: translateY(0);
+        rotate: -5deg;
+      }
+
+    50% {
+        transform: translateY(0%); 
+        rotate: 5deg;
+      }
+    
+    100% {
+        transform: translateY(80%); 
+        rotate: -5deg;
+      }
+} */
 
 
 /* @media (max-width: 480px) {
