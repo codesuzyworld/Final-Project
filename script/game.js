@@ -2,10 +2,6 @@
 //Listen for window load the jQuery way
 $(document).ready(function () {
 
-    // //Start Game
-    // let startGameSection = document.getElementById("startGame");
-    // let startGameBtn = document.getElementById("startGameBtn");
-
     // Timer and Score 
     let timer = document.getElementById("timer");
     let score = document.getElementById("score");
@@ -72,7 +68,7 @@ $(document).ready(function () {
 
     }
 
-    //Function that will start the game after clickint the start game button. 
+    //Function that will start the game after clicking the start game button. 
     function startGame(){
         //Reset interval and score
         remainingTime = gameTime; 
@@ -85,6 +81,8 @@ $(document).ready(function () {
         $("#startGameBtn").hide();
         $("#winMsg").hide();
         $(".mouse").removeClass("mouseMenuAnimation");
+
+        //Start the timer
         gameTimer();
         timer.innerHTML = Math.floor(gameTime / 1000) + "Sec";
 		// The interval will be 1 second, and will run the timer function 

@@ -18,6 +18,7 @@ img, a {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 .Btn{
     border-radius: 80px;
@@ -226,7 +227,91 @@ img, a {
         transform: translateY(0%) rotate(15deg);
     }
 }
+@media (max-width: 1024px) and (max-height: 600px) {
+    #whackAMole {
+        top: 75%; 
+        gap:0.5vw;
+    }
+    
+    .whack {
+        width: 150px; 
+        height: 150px; 
+    }
 
+    .mouse-container {
+        transform: translate(20%, -108%);
+    }
+
+    .mouse {
+        width: 50%;
+    }
+
+    #startGameBtn {
+        font-size: 15px;
+        padding: 10px;
+    }
+    
+    #winMsg {
+        max-width: 700px;
+        min-width: 400px;
+    }
+
+    .Btn {
+        padding: 15px 25px;
+    }
+
+    .box {
+        width: 150px;
+        padding: 8px 16px;
+    }
+
+    #timer, #score {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 540px) and (max-height: 720px) {
+    #whackAMole {
+        top: 75%;
+        gap:0.5vw;
+    }
+    
+    .whack {
+        width: 120px; 
+        height: 120px; 
+    }
+
+    .mouse-container {
+        transform: translate(20%, -108%);
+    }
+
+    .mouse {
+        width: 50%;
+    }
+
+    #startGameBtn {
+        font-size: 15px;
+        padding: 10px;
+    }
+    
+    #winMsg {
+        max-width: 700px;
+        min-width: 400px;
+    }
+
+    .Btn {
+        padding: 15px 25px;
+    }
+
+    .box {
+        width: 150px;
+        padding: 8px 16px;
+    }
+
+    #timer, #score {
+        font-size: 20px;
+    }
+}
 @media (max-width: 480px) {
     
     
@@ -246,6 +331,10 @@ img, a {
         padding:10px;
         box-shadow: 0px 0px 20px 5px #FFF;
     }
+    .whack {
+        width: 110px; 
+        height: 110px; 
+    }
 
     .box{
         border-radius: 33px;
@@ -254,10 +343,10 @@ img, a {
         gap: 10px;
     }
     #timer{
-        font-size: 14px;
+        font-size: 13px;
     }
     
     #score{
-        font-size:14px;
+        font-size:13px;
     }
 } 
