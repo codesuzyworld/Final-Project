@@ -54,7 +54,7 @@ $(document).ready(function () {
             timer.innerHTML = "0 Sec";
             gameResult.innerHTML = "Your score is " + gameScore;
             $(".mouse").removeClass("mouseAnimation");
-            $("#winMsg").show();
+            $("#winMsg").fadeIn(500);
             return;
         }
 
@@ -64,7 +64,7 @@ $(document).ready(function () {
         //Create time variables 
         // Turn the miliseconds into seconds
         let nowSeconds = Math.floor(remainingTime / 1000);
-        timer.innerHTML = nowSeconds + "Sec";
+        timer.innerHTML = nowSeconds + " " + "Sec";
 
     }
 
@@ -73,12 +73,12 @@ $(document).ready(function () {
         //Reset interval and score
         remainingTime = gameTime; 
         gameScore = 0; 
-        score.innerHTML = gameScore + " Points";
+        score.innerHTML = gameScore + " Pts";
         clearInterval(interval);
         $(".mouse").removeClass("mouseMenuAnimation mouseAnimation mouseHitAnimation");
 
         //Hide button
-        $("#startGameBtn").hide();
+        $("#startGameBtn").fadeOut(500);
         $("#winMsg").hide();
         $(".mouse").removeClass("mouseMenuAnimation");
 
@@ -94,7 +94,7 @@ $(document).ready(function () {
             if ($(this).find(".mouse").hasClass("mouseAnimation")) {
                 console.log("10 points added");
                 gameScore += 10;
-                score.innerHTML = gameScore + " Points";
+                score.innerHTML = gameScore + " Pts";
                 // Set the mouse element for easy access
                 let mouseElement = $(this).find(".mouse");
                 //Play hit animation 
@@ -113,10 +113,10 @@ $(document).ready(function () {
     });
 
     $("#playAgainBtn").on("click", function() {
-        $("#winMsg").hide();
-        $("#startGameBtn").show();
+        $("#winMsg").fadeOut(500);;
+        $("#startGameBtn").fadeIn(500);
         gameScore = 0;
-        score.innerHTML = gameScore + " Points";
+        score.innerHTML = gameScore + " Pts";
         $(".mouse").addClass("mouseMenuAnimation");
     });
 
